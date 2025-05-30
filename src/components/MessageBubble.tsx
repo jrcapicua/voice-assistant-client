@@ -173,7 +173,11 @@ export const MessageBubble: React.FC<MessageBubbleProps> = ({
               <span className="font-bold">
                 {isUser ? "You" : "Assistant"}:
               </span>{" "}
-              <span className="text-gray-900 dark:text-gray-100">{content}</span>
+              <span className="text-gray-900 dark:text-gray-100">
+                {type === "audio" && (!content || content.trim() === "")
+                  ? "Transcript not yet available."
+                  : content}
+              </span>
             </div>
           </div>
         </div>

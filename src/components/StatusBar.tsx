@@ -18,8 +18,8 @@ export const StatusBar: React.FC<StatusBarProps> = ({ error, status, onRetry }) 
           {onRetry && (
             <button
               onClick={onRetry}
-              title="Reintentar"
-              aria-label="Reintentar"
+              title="Retry"
+              aria-label="Retry"
               className="ml-1 p-1 rounded hover:bg-red-100 dark:hover:bg-red-900 transition"
               type="button"
             >
